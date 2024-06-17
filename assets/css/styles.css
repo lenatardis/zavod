@@ -1,0 +1,9 @@
+.wrap {
+    margin: 0 auto;
+    width: 1820px;
+
+    a {
+        color: red;
+    }
+}
+
