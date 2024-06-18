@@ -1,15 +1,19 @@
 $(function($) {
+
+    /*toggle header menu*/
     $('header button').click(function() {
         $('.header__menu').toggleClass('active');
         $('.open-block').toggleClass('hide');
         $('.close-block').toggleClass('show');
     });
 
+    /*toggle header menu submenu*/
     $('.header__dropdown-link').click(function(e){
         e.preventDefault();
         $(this).next('.header__dropdown').slideToggle(100);
     })
 
+    /*language dropdown*/
     $('.lang-dropdown__main').click(function(e){
         e.stopPropagation();
         $(this).next('.lang-dropdown__options').slideToggle();
