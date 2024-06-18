@@ -102,10 +102,6 @@ form, menu, iframe {
     text-transform: uppercase;
 }
 
-/*.header__contact-block a img {
-    display: block;
-}*/
-
 .header__menu {
     display: none;
 }
@@ -116,9 +112,9 @@ form, menu, iframe {
     position: absolute;
     left: 0;
     top: 100%;
-    min-height: calc(100vh - 74px);
+    /* min-height: calc(100vh - 74px);*/
     min-width: 100%;
-    background: pink;
+    /* background: pink;*/
 }
 
 .header__menu-wrap {
@@ -126,7 +122,7 @@ form, menu, iframe {
 }
 
 .header__main-list {
-    padding-bottom: 68px;
+    padding-bottom: 64px;
 }
 
 .header__main-list > li > a {
@@ -216,6 +212,10 @@ form, menu, iframe {
     align-items: center;
 }
 
+.header__menu-socials span {
+    display: none;
+}
+
 .header__img-wrap {
     position: relative;
     overflow: hidden;
@@ -229,14 +229,15 @@ form, menu, iframe {
     width: 100%;
     height: 35%;
 }
+
 .header__img-wrap:before {
     top: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,255), rgba(0,0,0,0));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 255), rgba(0, 0, 0, 0));
 }
 
 .header__img-wrap:after {
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,255));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 255));
 }
 
 .header__img-wrap img {
@@ -245,6 +246,63 @@ form, menu, iframe {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .header__menu-block button span, .header__contact-block, .header__img-wrap, .header__phone, .header__mail, .header__address {
+        display: none;
+    }
+
+    header, main, footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header__menu-block {
+        order: 2;
+    }
+
+    .header__logo {
+        width: 54px;
+        height: 24px;
+    }
+
+    .header__inner-wrap {
+        height: 64px;
+    }
+
+    .header__menu.active {
+        grid-template-columns: 1fr;
+    }
+
+    .header__menu-wrap {
+        padding-top: 22px;
+    }
+
+    .header__main-list > li > a {
+        font-size: 42px;
+    }
+
+    .header__dropdown-link {
+        margin-bottom: 20px;
+    }
+
+    .header__dropdown {
+        padding-left: 32px;
+        padding-bottom: 14px;
+    }
+
+    .header__dropdown > div {
+        flex-direction: column;
+    }
+
+    .header__menu-socials span {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+    }
 }
 
 
