@@ -90,6 +90,13 @@ form, menu, iframe {
     display: none;
 }
 
+.header__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .header__info-block {
     display: flex;
     align-items: center;
@@ -182,11 +189,10 @@ form, menu, iframe {
 }
 
 .header__dropdown {
-    padding-bottom: 34px;
-}
-
-.header__dropdown > div {
+    /*starting point*/
+    /*display: none;*/
     display: grid;
+    padding-bottom: 34px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     row-gap: 10px;
 }
@@ -325,12 +331,15 @@ form, menu, iframe {
     }
 
     .header__logo {
+        left: 0;
+        transform: translate(0, -50%);
         width: 54px;
         height: 24px;
     }
 
     .header__inner-wrap {
         height: 64px;
+        justify-content: flex-end;
     }
 
     .header__menu.active {
@@ -357,9 +366,6 @@ form, menu, iframe {
     .header__dropdown {
         padding-left: 32px;
         padding-bottom: 14px;
-    }
-
-    .header__dropdown > div {
         grid-template-columns: 1fr;
         row-gap: 0;
     }
