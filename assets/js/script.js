@@ -27,6 +27,7 @@ $(function($) {
 
     $('.lang-dropdown__options a').click(function(e){
         e.stopPropagation();
+        e.preventDefault();
         let text = $(this).text();
         let dropdownToggle =  $(this).parents('.lang-dropdown').find('.lang-dropdown__main');
         dropdownToggle.find('.lang-dropdown__selected').text(text).next('img').removeClass('rotated-arr');
