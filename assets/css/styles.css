@@ -379,6 +379,23 @@ form, menu, iframe {
     }
 }
 
+/*hero slider section */
+
+.hero-slider-wrap {
+    margin-left: -50px;
+    margin-right: -50px;
+}
+.hero-slider__item img {
+    width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    .hero-slider-wrap {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
+
 /*footer*/
 
 .footer {

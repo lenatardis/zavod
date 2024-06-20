@@ -29,9 +29,9 @@ $(function($) {
         e.stopPropagation();
         e.preventDefault();
         let text = $(this).text();
-        let dropdownToggle =  $(this).parents('.lang-dropdown').find('.lang-dropdown__main');
+        let dropdownToggle =  $(this).parents('.lang-dropdown').eq(0).find('.lang-dropdown__main');
         dropdownToggle.find('.lang-dropdown__selected').text(text).next('img').removeClass('rotated-arr');
-        $(this).parents('.lang-dropdown__options').slideUp();
+        $(this).parents('.lang-dropdown__options').eq(0).slideUp();
     })
 
     $(document).on('click', function(e) {
