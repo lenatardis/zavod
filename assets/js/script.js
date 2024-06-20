@@ -45,7 +45,7 @@ $(function($) {
     /*hero slider*/
 
     $('.hero-slider').slick({
-        autoplay:true,
+      /*  autoplay:true,*/
         speed: 150,
         slidesToShow: 1,
         slidesToScroll: 1,

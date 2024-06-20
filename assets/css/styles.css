@@ -442,18 +442,88 @@ form, menu, iframe {
     color: #ffffff;
 }
 
+.hero-slider__link-wrap div {
+    width: 86px;
+    height: 86px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-slider__link1 div {
+    background-image: url('../images/rubble.svg');
+}
+
+.hero-slider__link1:hover div {
+    background-image: url('../images/rubble_hover.svg');
+}
+
+.hero-slider__link2 div {
+    background-image: url('../images/shipping.svg');
+}
+
+.hero-slider__link2:hover div {
+    background-image: url('../images/shipping_hover.svg');
+}
+
+.hero-slider__link3 div {
+    background-image: url('../images/calculator.svg');
+}
+
+.hero-slider__link3:hover div {
+    background-image: url('../images/calculator_hover.svg');
+}
+
+.hero-slider__link4 div {
+    background-image: url('../images/construction.svg');
+}
+
+.hero-slider__link4:hover div {
+    background-image: url('../images/construction_hover.svg');
+}
+
 @media screen and (max-width: 960px) {
     .hero-slider-wrap {
         margin-left: -16px;
         margin-right: -16px;
     }
 
-    .hero-slider__item h2 {
-        left: 16px;
+    .hero-slider-wrap:before {
+        height: 40%;
     }
 
-    .hero-slider__links img {
-        transform: scale(0.557);
+    .hero-slider__item h2 {
+        font-size: 72px;
+        left: 16px;
+        top: auto;
+        bottom: 22.26%;
+        transform: translate(0, 0);
+    }
+
+    .hero-slider__link-wrap div {
+        transform: scale(0.6);
+    }
+
+    .hero-slider__links {
+        left: 0;
+        transform: translate(0, 0);
+        bottom: 6.4%;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .hero-slider__links a span {
+        font-size: 12px;
+    }
+
+    .hero-slider__item img {
+        height: calc(100vh - 64px);
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-slider__links a {
+        row-gap: 0;
     }
 }
 
