@@ -41,4 +41,18 @@ $(function($) {
             $dropdown.find('img').removeClass('rotated-arr');
         }
     });
+
+    /*hero slider*/
+
+    $('.hero-slider').slick({
+        autoplay:true,
+        speed: 150,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        arrows: false
+    });
+
+
 });
