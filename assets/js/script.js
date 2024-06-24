@@ -68,5 +68,10 @@ $(function ($) {
     $('.m-slider__prev-btn').on('click', function () {$('.m-slider').slick('slickPrev');});
     $('.m-slider__next-btn').on('click', function () {$('.m-slider').slick('slickNext');});
 
+    /* phone validation */
 
-
+    $('#phone').on('input', function() {
+        let input = $(this).val();
+        let sanitizedInput = input.replace(/[^0-9+]/g, '').replace(/(?!^)\+/g, '');
+        $(this).val(sanitizedInput);
+    });
