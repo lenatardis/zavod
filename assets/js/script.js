@@ -74,3 +74,25 @@ $(function ($) {
         let sanitizedInput = input.replace(/[^0-9+]/g, '').replace(/(?!^)\+/g, '');
         $(this).val(sanitizedInput);
     });
+
+    /*FAQ dropdown*/
+
+    $('.FAQ__question').on('click', function(){
+        let item = $(this).parents('.FAQ__item').eq(0);
+        let currentAnswer = $(this).next('.FAQ__answer');
+        let currentBtn = item.find('.FAQ__btn');
+        item.parents('.FAQ').eq(0).find('.FAQ__answer').not(currentAnswer).slideUp();
+        item.parents('.FAQ').eq(0).find('.FAQ__btn').not(currentBtn).removeClass('FAQ__btn-up');
+        currentAnswer.slideToggle(100);
+        currentBtn.toggleClass('FAQ__btn-up');
+    })
+
+    $('.FAQ__btn').on('click', function() {
+        let item = $(this).parents('.FAQ__item').eq(0);
+        let currentAnswer = item.find('.FAQ__answer');
+        let currentBtn = $(this);
+        item.parents('.FAQ').eq(0).find('.FAQ__answer').not(currentAnswer).slideUp();
+        item.parents('.FAQ').eq(0).find('.FAQ__btn').not(currentBtn).removeClass('FAQ__btn-up');
+        currentBtn.toggleClass('FAQ__btn-up');
+        currentAnswer.slideToggle(100);
+    });
