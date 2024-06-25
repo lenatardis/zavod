@@ -1316,7 +1316,7 @@ h2 span {
     }
 
     .product-item h3 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .product-item__frame {
@@ -1411,7 +1411,7 @@ h2 span {
 @media screen and (max-width: 960px) {
     .FAQ__number {
         padding-right: 16px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .FAQ-block .block-naming, .FAQ__answer {
@@ -1419,7 +1419,7 @@ h2 span {
     }
 
     .FAQ__question {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .FAQ__item {
