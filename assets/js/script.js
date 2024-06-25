@@ -8,7 +8,7 @@ $(function ($) {
     });
 
     /*toggle header menu submenu (header dropdown)*/
-    $('.header__dropdown-link').click(function (e) {
+   /* $('.header__dropdown-link').click(function (e) {
         e.preventDefault();
         let dropdown = $(this).next('.header__dropdown');
         dropdown.slideToggle(100, function () {
@@ -16,7 +16,7 @@ $(function ($) {
                 dropdown.css('display', 'grid');
             }
         });
-    });
+    });*/
 
     /*language dropdown*/
     $('.lang-dropdown__main').click(function (e) {
@@ -69,7 +69,6 @@ $(function ($) {
     $('.m-slider__next-btn').on('click', function () {$('.m-slider').slick('slickNext');});
 
     /* phone validation */
-
     $('#phone').on('input', function() {
         let input = $(this).val();
         let sanitizedInput = input.replace(/[^0-9+]/g, '').replace(/(?!^)\+/g, '');
