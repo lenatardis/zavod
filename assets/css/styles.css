@@ -684,7 +684,7 @@ h2 span {
         font-size: 75px;
     }
 
-    .about > div:first-of-type p {
+    .about .block-naming {
         padding-bottom: 24px;
     }
 
@@ -710,7 +710,7 @@ h2 span {
         font-size: 16px;
     }
 
-    .about > div:first-of-type p {
+    .about .block-naming {
         padding-left: 32px;
     }
 
@@ -785,7 +785,7 @@ h2 span {
         margin-bottom: 24px;
     }
 
-    .advantages > div:first-of-type p {
+    .advantages .block-naming {
         padding-bottom: 24px;
     }
 
@@ -811,7 +811,7 @@ h2 span {
         padding-bottom: 140px;
     }
 
-    .advantages > div:first-of-type p {
+    .advantages .block-naming {
         padding-left: 32px;
     }
 
@@ -976,10 +976,10 @@ h2 span {
     height: 38px;
 }
 
-.form-wrap input:-internal-autofill-selected {
+/*.form-wrap input:-internal-autofill-selected {
     background: #ffffff !important;
     color: #B3B3B3 !important;
-}
+}*/
 
 .form-wrap textarea {
     margin-bottom: 60px;
@@ -1149,6 +1149,51 @@ h2 span {
     .footer__logo-block img {
         width: 54px;
         height: 24px;
+    }
+}
+
+/* production page */
+
+.production-hero {
+    position: relative;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+.production-hero img {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 74px);
+    object-fit: cover;
+}
+
+.production-hero h2 {
+    position: absolute;
+    left: 50px;
+    bottom: 9%;
+    font-size: 180px;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1450px) {
+    .production-hero h2 {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .production-hero {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .production-hero img {
+        height: calc(100vh - 64px);
+    }
+
+    .production-hero h2 {
+        font-size: 72px;
+        left: 16px;
+        width: 320px;
     }
 }
 
