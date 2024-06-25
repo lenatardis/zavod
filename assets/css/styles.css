@@ -444,11 +444,11 @@ h2 span {
         font-size: 42px;
     }
 
-    .header__dropdown-link {
+    .header__submenu-link {
         margin-bottom: 20px;
     }
 
-    .header__dropdown {
+    .header__submenu {
         padding-left: 32px;
         padding-bottom: 14px;
         grid-template-columns: 1fr;
