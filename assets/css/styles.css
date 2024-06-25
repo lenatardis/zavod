@@ -1366,6 +1366,10 @@ h2 span {
     padding-top: 28px;
 }
 
+.FAQ__btn-block {
+    margin-left: 10px;
+}
+
 .FAQ__btn {
     display: flex;
     align-items: center;
@@ -1388,6 +1392,48 @@ h2 span {
 
 .FAQ__btn-up img {
     transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1450px) {
+    .FAQ-block {
+        padding-bottom: 100px;
+    }
+
+    .FAQ__number {
+        padding-right: 50px;
+    }
+
+    .FAQ__question {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .FAQ__number {
+        padding-right: 16px;
+        font-size: 20px;
+    }
+
+    .FAQ-block .block-naming, .FAQ__answer {
+        font-size: 16px;
+    }
+
+    .FAQ__question {
+        font-size: 20px;
+    }
+
+    .FAQ__item {
+        padding: 40px 0;
+    }
+
+    .FAQ__btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .FAQ__answer {
+        padding-top: 20px;
+    }
 }
 
 
