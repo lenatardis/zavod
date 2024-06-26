@@ -1231,9 +1231,10 @@ h2 span {
     row-gap: 60px;
 }
 
-.product-item {
+.product-item__inner-wrap {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .product-item__frame {
