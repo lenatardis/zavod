@@ -1224,10 +1224,6 @@ h2 span {
     margin-bottom: 60px;
 }
 
-.price-block__warning {
-    width: 1025px;
-}
-
 .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1629,9 +1625,6 @@ h2 span {
     margin-bottom: 14px;
 }
 
-.usage-block__desc p {
-    width: 1150px;
-}
 
 @media screen and (max-width: 1450px) {
     .usage-block {
@@ -1641,10 +1634,6 @@ h2 span {
 
     .usage-block .block-naming {
         margin-bottom: 24px;
-    }
-
-    .usage-block__desc p {
-        width: 100%;
     }
 }
 
