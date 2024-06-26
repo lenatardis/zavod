@@ -508,25 +508,26 @@ h2 span {
 .hero-slider__item h2 {
     position: absolute;
     left: 50px;
-    top: 50%;
+   /* top: 50%;*/
+    top: 48%;
     transform: translate(0, -50%);
     width: 1216px;
     font-family: 'AABebasNeue', sans-serif;
     font-size: 140px;
     font-weight: 400;
-    line-height: 0.9em;
+   /* line-height: 0.9em;*/
+    line-height: 0.96em;
     color: #ffffff;
     z-index: 15;
 }
 
 .hero-slider__links {
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: 18%;
-    width: 44%;
-    transform: translate(-50%, 0);
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 15;
 }
 
@@ -535,7 +536,8 @@ h2 span {
     flex-direction: column;
     align-items: center;
     width: 190px;
-    height: 135px;
+    height: 122px;
+    margin: 0 16px;
     row-gap: 8px;
     color: #ffffff;
 }
@@ -546,7 +548,7 @@ h2 span {
 
 .hero-slider__link-wrap div {
     width: 100%;
-    height: calc(100% - 31px);
+    height: 85px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -591,7 +593,6 @@ h2 span {
     }
 
     .hero-slider__links {
-        width: 70%;
         bottom: 8%;
     }
 
@@ -620,20 +621,17 @@ h2 span {
     }
 
     .hero-slider__link-wrap div {
-        height: calc(100% - 31px);
+        height: 54px;
     }
 
     .hero-slider__links {
-        left: 0;
-        transform: translate(0, 0);
         bottom: 6.4%;
-        width: 100%;
-        justify-content: space-around;
     }
 
     .hero-slider__links a {
-        width: 80px;
+        width: 82px;
         height: 74px;
+        margin: 0 8px;
     }
 
     .hero-slider__links a span {
