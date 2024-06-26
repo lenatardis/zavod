@@ -1688,6 +1688,22 @@ h2 span {
     aspect-ratio: 465/386;
 }
 
+@media screen and (max-width: 1450px) {
+    .alike-grid .product-item__frame {
+        padding: 32px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .alike-grid .product-item {
+        margin-right: 0;
+    }
+
+    .alike-grid .product-item__frame {
+        padding: 10px;
+    }
+}
+
 
 
 

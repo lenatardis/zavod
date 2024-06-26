@@ -107,4 +107,19 @@ $(function ($) {
         infinite: true,
         dots: false,
         arrows: false,
+       /* variableWidth: true,*/
+        responsive: [
+            {
+                breakpoint: 1451,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 961,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
