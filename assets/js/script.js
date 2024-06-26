@@ -96,3 +96,34 @@ $(function ($) {
         currentBtn.toggleClass('FAQ__btn-up');
         currentAnswer.slideToggle(100);
     });
+
+    /* alike slider */
+
+    $('.alike-grid').slick({
+       /* autoplay: true,*/
+        speed: 150,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        arrows: false,
+    });
+
+function equalizeSlideHeights() {
+    var maxHeight = 0;
+    $('.alike-grid .product-item').each(function() {
+        var thisHeight = $(this).outerHeight();
+        if (thisHeight > maxHeight) { maxHeight = thisHeight; }
+    });
+    $('.alike-grid .product-item').height(maxHeight);
+}
+
+    equalizeSlideHeights();
+    $('.alike-grid').on('setPosition', function() {
+        console.log('hdhdl');
+        equalizeSlideHeights();
+    });
+
+    $(window).resize(function() {
+        equalizeSlideHeights();
+    });
