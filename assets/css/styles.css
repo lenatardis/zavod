@@ -1274,7 +1274,8 @@ h2 span {
     }
 
     .price-block__warning-wrap {
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr;
+        row-gap: 24px;
     }
 
     .price-block__warning {
@@ -1298,7 +1299,7 @@ h2 span {
     }
 
     .price-block__warning-wrap {
-        grid-template-columns: 1fr;
+        row-gap: 0;
         margin-bottom: 50px;
     }
 
@@ -1408,7 +1409,7 @@ h2 span {
     }
 
     .FAQ__question {
-        font-size: 28px;
+        font-size: 24px;
     }
 }
 
@@ -1614,6 +1615,56 @@ h2 span {
         font-size: 20px;
     }
 }
+
+/* usage-block*/
+
+.usage-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 22px;
+    padding-bottom: 260px;
+}
+
+.usage-block h2 {
+    margin-bottom: 14px;
+}
+
+.usage-block__desc p {
+    width: 1150px;
+}
+
+@media screen and (max-width: 1450px) {
+    .usage-block {
+        grid-template-columns: 1fr;
+        padding-bottom: 100px;
+    }
+
+    .usage-block .block-naming {
+        margin-bottom: 24px;
+    }
+
+    .usage-block__desc p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .usage-block h2 {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .usage-block .block-naming {
+        padding-left: 32px;
+    }
+
+    .usage-block p {
+        font-size: 16px;
+        padding-left: 32px;
+    }
+}
+
+
 
 
 
