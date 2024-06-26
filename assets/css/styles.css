@@ -1247,6 +1247,7 @@ h2 span {
 .product-item img {
     display: block;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -1679,6 +1680,14 @@ h2 span {
 .alike-grid .product-item__frame {
     padding: 64px;
 }
+
+/* aspect ratio for product page alike-grid slider */
+
+.alike-grid .product-item__img-wrap {
+    overflow: hidden;
+    aspect-ratio: 465/386;
+}
+
 
 
 
