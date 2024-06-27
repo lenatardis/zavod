@@ -1173,7 +1173,8 @@ h2 span {
 .production-hero img {
     display: block;
     width: 100%;
-    height: calc(100vh - 74px);
+    max-height: 916px;
+   /* height: calc(100vh - 74px);*/
     object-fit: cover;
 }
 
@@ -1467,7 +1468,8 @@ h2 span {
 .product-hero img {
     display: block;
     width: 100%;
-    height: calc(100vh - 74px);
+    /*height: calc(100vh - 74px);*/
+    max-height: 916px;
     object-fit: cover;
 }
 
