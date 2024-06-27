@@ -52,10 +52,11 @@ $(function ($) {
         slidesToScroll: 1,
         infinite: true,
         dots: true,
-        appendDots: $('.grey-line__wrap'),
+        appendDots: $('.m-slider__nav'),
         arrows: false
 });
     /* manufacturing slider custom arrows*/
+
     $('.m-slider__prev-btn').on('click', function () {$('.m-slider').slick('slickPrev');});
     $('.m-slider__next-btn').on('click', function () {$('.m-slider').slick('slickNext');});
 
@@ -90,13 +91,14 @@ $(function ($) {
 
     /* alike slider */
 
-    $('.alike-grid').slick({
+    $('.alike-slider').slick({
        /* autoplay: true,*/
         speed: 150,
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        dots: false,
+        dots: true,
+        appendDots: $('.alike-slider__nav'),
         arrows: false,
         responsive: [
             {
@@ -113,3 +115,7 @@ $(function ($) {
             }
         ]
     });
+
+    /* alike slider custom arrows*/
+    $('.alike-slider__prev-btn').on('click', function () {$('.alike-slider').slick('slickPrev');});
+    $('.alike-slider__next-btn').on('click', function () {$('.alike-slider').slick('slickNext');});
