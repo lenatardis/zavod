@@ -31,6 +31,14 @@ $(function ($) {
         }
     });
 
+    /* mobile language dropdown */
+    $('.mobile-lang-dropdown li').eq(0).addClass('active');
+    $('.mobile-lang-dropdown li').on('click', function(e){
+        e.preventDefault();
+        $('.mobile-lang-dropdown li.active').removeClass('active');
+        $(this).addClass('active');
+    });
+
     /*hero slider*/
 
     $('.hero-slider').slick({
