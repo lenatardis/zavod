@@ -74,13 +74,9 @@ $(function ($) {
     $('.m-slider-dot').eq(0).addClass('active');
 
     $('.m-slider-dot').each(function(index){
-        console.log(index);
         let length = $('.m-slider-dot').length;
-        console.log(length);
         let width = 100 / parseInt(length);
-        console.log(width);
         let left = index * width;
-        console.log(left);
         $(this).css({'width': width+'%', 'left': left+'%'});
     });
 
@@ -133,7 +129,6 @@ $(function ($) {
         infinite: true,
         dots: false,
         arrows: false,
-       /* variableWidth: true,*/
         responsive: [
             {
                 breakpoint: 1451,
