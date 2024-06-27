@@ -887,6 +887,10 @@ h2 span {
     display: none;
 }
 
+.grey-line__wrap {
+    display: none;
+}
+
 @media screen and (max-width: 1450px) {
     .m-slider-wrap {
         padding-bottom: 60px;
@@ -945,32 +949,33 @@ h2 span {
         align-items: center;
     }
 
-    .m-slider-wrap .grey-line__wrap {
-        position: relative;
-        width: 100%;
-        height: 1px;
-        background: #B4B4B4;
-    }
-
-    .m-slider-wrap .grey-line {
+    .grey-line__wrap {
         display: block;
-        width: 100%;
-        height: 100%;
     }
 
-    .m-slider-dot {
-        position: absolute;
+    .grey-line__wrap {
+        width: 100%;
+    }
+
+    .grey-line__wrap ul {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .grey-line__wrap ul li {
+        width: 100%;
         height: 1px;
         background-color: #B4B4B4;
-        cursor: pointer;
-        top: 0;
-        z-index: 2;
     }
 
-    .m-slider-dot.active {
+    .grey-line__wrap ul li.slick-active {
         background-color: #000000;
     }
 
+    .grey-line__wrap ul li button{
+        display: none;
+    }
 }
 
 /* connect (form and map section) */
