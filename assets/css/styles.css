@@ -643,6 +643,10 @@ h2 span {
         object-fit: cover;
         object-position: center;
     }
+
+    .hero-slider__link-wrap.hero-slider__link3 > span {
+        text-transform: capitalize;
+    }
 }
 
 /*about*/
