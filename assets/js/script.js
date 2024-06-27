@@ -65,8 +65,34 @@ $(function ($) {
         dots: false,
         arrows: false
 });
+    /* manufacturing slider custom arrows*/
     $('.m-slider__prev-btn').on('click', function () {$('.m-slider').slick('slickPrev');});
     $('.m-slider__next-btn').on('click', function () {$('.m-slider').slick('slickNext');});
+
+    /* manufacturing slider custom navigation*/
+
+    $('.m-slider-dot').eq(0).addClass('active');
+
+    $('.m-slider-dot').each(function(index){
+        console.log(index);
+        let length = $('.m-slider-dot').length;
+        console.log(length);
+        let width = 100 / parseInt(length);
+        console.log(width);
+        let left = index * width;
+        console.log(left);
+        $(this).css({'width': width+'%', 'left': left+'%'});
+    });
+
+    $('.m-slider-dot').on('click', function () {
+        let slideIndex = $(this).data('slide');
+        $('.m-slider').slick('slickGoTo', parseInt(slideIndex));
+    });
+
+    $('.m-slider').on('afterChange', function (event, slick, currentSlide) {
+        $('.m-slider-dot').removeClass('active');
+        $('.m-slider-dot[data-slide="' + currentSlide + '"]').addClass('active');
+    });
 
     /* phone validation */
     $('#phone').on('input', function() {
