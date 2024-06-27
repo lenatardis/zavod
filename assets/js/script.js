@@ -46,7 +46,7 @@ $(function ($) {
 
     /*manufacturing slider */
     $('.m-slider').slick({
-        autoplay: false,
+        autoplay: true,
         speed: 150,
         slidesToShow: 1,
         slidesToScroll: 1,
