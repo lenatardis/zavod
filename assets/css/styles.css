@@ -741,6 +741,22 @@ h2 span {
     object-position: center;
 }
 
+.more {
+    position: relative;
+    padding-right:20px;
+}
+
+.more:before {
+    position: absolute;
+    content:'';
+    right:0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 9px;
+    height: 17px;
+    background: url('../images/more.svg') no-repeat left top;
+}
+
 @media screen and (max-width: 1450px) {
     .about {
         grid-template-columns: 1fr;
@@ -801,6 +817,10 @@ h2 span {
         margin-left: 0;
         margin-right: 0;
         column-gap: 8px;
+    }
+
+    .more:before {
+        transform: translate(0, -50%) scale(0.7);
     }
 }
 
@@ -993,6 +1013,10 @@ h2 span {
     .prev-btn, .next-btn {
         width: 36px;
         height: 36px;
+    }
+
+    .prev-btn:before, .next-btn:before {
+        transform: translate(-50%, -50%) scale(0.7);
     }
 
     .slider__mobile-panel {
