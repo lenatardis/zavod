@@ -694,6 +694,14 @@ h2 span {
     }
 }
 
+@media screen and (max-width: 335px) {
+    .hero-slider__item h2 {
+        left: 10px;
+        font-size: 65px;
+        width: 90%;
+    }
+}
+
 /*about*/
 
 .about {
@@ -1281,6 +1289,14 @@ h2 span {
     }
 }
 
+@media screen and (max-width: 335px) {
+    .production-hero h2 {
+        left: 10px;
+        font-size: 65px;
+        width: 90%;
+    }
+}
+
 /* price-block */
 
 .price-block {
@@ -1574,6 +1590,14 @@ h2 span {
         font-size: 72px;
         left: 16px;
         width: 320px;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .product-hero h2 {
+        left: 10px;
+        font-size: 65px;
+        width: 90%;
     }
 }
 
