@@ -1851,6 +1851,157 @@ h2 span {
 
 }
 
+/*certification page*/
+.certification-hero {
+    position: relative;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.certification-hero:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 255));
+}
+
+.certification-hero h2 {
+    position: absolute;
+    left: 50px;
+    bottom: 17.46%;
+    font-size: 180px;
+    color: #ffffff;
+    z-index: 15;
+}
+
+.certification-hero img {
+    display: block;
+    width: 100%;
+    /*height: calc(100vh - 74px);*/
+    max-height: 916px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1450px) {
+    .certification-hero h2 {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .certification-hero {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .certification-hero img {
+        height: calc(100vh - 64px);
+    }
+
+    .certification-hero h2 {
+        font-size: 72px;
+        left: 16px;
+    }
+}
+
+.certification-block {
+    padding-bottom: 260px;
+}
+
+.certification-slider .product-item {
+    margin-right: 20px;
+}
+
+.certification-slider .product-item:last-child {
+    margin-right: 0;
+}
+
+.certification-slider .product-item__frame {
+    padding: 80px 120px;
+    margin-bottom: 0;
+}
+
+/* aspect ratio for certification slider */
+
+.certification-slider .product-item__img-wrap {
+    overflow: hidden;
+    aspect-ratio: 350/495;
+}
+
+.certification-block .slider__title-block {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.certification-block__title-wrap {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+    padding-top: 260px;
+    margin-bottom: 60px;
+}
+
+.certification-block__title-wrap h3 {
+    margin-bottom: 20px;
+}
+
+h2 span {
+    line-height: 1em;
+}
+
+@media screen and (max-width: 1450px) {
+    .certification-block {
+        padding-bottom: 100px;
+    }
+
+    .certification-block__title-wrap {
+        padding-top: 100px;
+    }
+
+    .certification-block h2 {
+        font-size: 80px;
+    }
+
+    .certification-slider .product-item__frame {
+        padding: 32px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .certification-block__title-wrap {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .certification-slider .product-item {
+        margin-right: 0;
+    }
+
+    .certification-slider .product-item__frame {
+        padding: 10px;
+    }
+
+    .certification-block .block-naming {
+        padding-left: 32px;
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .certification-block h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .certification-block__title-wrap p {
+        font-size: 16px;
+    }
+}
+
+
 
 
 

@@ -100,7 +100,7 @@ $(function ($) {
     /* alike slider */
 
     $('.alike-slider').slick({
-       /* autoplay: true,*/
+        autoplay: true,
         speed: 150,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -127,3 +127,39 @@ $(function ($) {
     /* alike slider custom arrows*/
     $('.alike-slider__prev-btn').on('click', function () {$('.alike-slider').slick('slickPrev');});
     $('.alike-slider__next-btn').on('click', function () {$('.alike-slider').slick('slickNext');});
+
+    /* certification slider*/
+
+    $('.certification-slider').slick({
+    /* autoplay: true,*/
+        speed: 150,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        appendDots: $('.certification-slider__nav'),
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1451,
+                settings: {
+                    slidesToShow: 2
+                }
+                },
+            {
+                breakpoint: 961,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+            ]
+    });
+
+    /* certification slider custom arrows*/
+    $('.certification-slider__prev-btn').on('click', function () {
+        $('.certification-slider').slick('slickPrev');
+    });
+    $('.certification-slider__next-btn').on('click', function () {
+        $('.certification-slider').slick('slickNext');
+    });
+
