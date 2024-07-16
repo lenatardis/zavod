@@ -2001,6 +2001,166 @@ h2 span {
     }
 }
 
+/* contact page*/
+
+.contact-hero {
+    position: relative;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.contact-hero:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 255));
+}
+
+.contact-hero img {
+    display: block;
+    width: 100%;
+    max-height: 916px;
+    object-fit: cover;
+}
+
+.contact-hero h2 {
+    position: absolute;
+    left: 50px;
+    bottom: 5.6%;
+    font-size: 180px;
+    color: #ffffff;
+    z-index: 15;
+    line-height: 0.9em;
+}
+
+.contact-connect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 120px;
+    padding-top: 260px;
+    padding-bottom: 260px;
+}
+
+.contact-connect h2 {
+    margin-bottom: 20px;
+}
+
+.contact-connect .contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-connect .contact-form .btn {
+    align-self: flex-end;
+}
+
+.contact-info p, .contact-info a {
+    font-size: 24px;
+}
+
+.contact-info a {
+    color: #191919;
+    font-weight: 600;
+}
+
+.contact-info  > div:not(:last-child) {
+    padding-bottom: 60px;
+}
+
+.contact-info .block-naming {
+    padding-bottom: 28px;
+}
+
+.contact-info .block-naming + p {
+    font-weight: 600;
+}
+
+.geo {
+    display: block;
+    position: relative;
+    padding-left: 84px;
+}
+
+.geo:before {
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: url(../images/geo.svg) no-repeat left top;
+}
+
+@media screen and (max-width: 1450px) {
+    .contact-hero h2 {
+        font-size: 100px;
+    }
+
+    .contact-connect {
+        padding-top: 100px;
+        padding-bottom: 140px;
+    }
+
+    .contact-connect .contact-form .btn {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .contact-hero {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .contact-hero img {
+        height: calc(100vh - 64px);
+    }
+
+    .contact-hero h2 {
+        font-size: 72px;
+        left: 16px;
+    }
+
+    .contact-connect {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 80px;
+    }
+
+    .contact-connect h2 {
+        font-size: 36px;
+        margin-bottom: 24px;
+        max-width: 300px;
+    }
+
+    .contact-info p, .contact-info a {
+        font-size: 16px;
+        padding-left: 32px;
+    }
+
+    .certification-block h2 + p {
+        padding-left: 32px;
+    }
+
+    .contact-info  > div:not(:last-child) {
+        padding-bottom: 28px;
+    }
+
+    .contact-info .geo {
+        padding-left: 60px;
+        margin-left: 32px;
+    }
+
+    .contact-info .geo:before {
+        transform-origin: 0 0;
+        transform: scale(0.65);
+    }
+}
+
 
 
 

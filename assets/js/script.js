@@ -131,7 +131,7 @@ $(function ($) {
     /* certification slider*/
 
     $('.certification-slider').slick({
-    /* autoplay: true,*/
+        autoplay: true,
         speed: 150,
         slidesToShow: 3,
         slidesToScroll: 1,
