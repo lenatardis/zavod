@@ -54,14 +54,14 @@ form, menu, iframe {
     border: none;
 }
 
-h2 {
+h2, h1 {
     font-family: 'AABebasNeue', sans-serif;
     font-size: 100px;
     line-height: 1em;
     font-weight: 400;
 }
 
-h2 span {
+h2 span, h1 span {
     color: #FF8A00;
 }
 
@@ -1662,7 +1662,7 @@ h2 span {
     margin-bottom: 139px;
 }
 
-.feature-block h2 {
+.feature-block h2, .feature-block h1 {
     margin-bottom: 27px;
 }
 
@@ -1726,7 +1726,7 @@ h2 span {
         height: 250px;
     }
 
-    .feature-block h2 {
+    .feature-block h2, .feature-block h1 {
         font-size: 36px;
         margin-bottom: 24px;
     }
@@ -2170,6 +2170,28 @@ h2 span {
     .contact-info .geo:before {
         transform-origin: 0 0;
         transform: scale(0.65);
+    }
+}
+/* style fixes*/
+
+/* to implement AFTER INSERTING span with social media name into tag a in header__info-block*/
+.header__info-block .social-block a {
+    display: flex;
+    column-gap: 20px;
+}
+.header__info-block .social-block a span {
+    color: #191919;
+}
+
+/*hiding product-hero in mobile version*/
+
+@media screen and (max-width: 960px) {
+    .product-hero {
+        display: none;
+    }
+
+    .feature-block {
+        padding-top: 24px;
     }
 }
 
