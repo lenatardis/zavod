@@ -2195,6 +2195,42 @@ h2 span {
     }
 }
 
+/* list items margin customization in mobile version*/
+
+@media screen and (max-width: 960px) {
+    .usage-block__desc ul li {
+        margin-left: 20px;
+    }
+}
+
+/* footer phone number style fixes*/
+
+@media screen and (max-width: 960px) {
+    .footer__mail-block a:first-of-type, .footer__mail-block a:nth-of-type(2) {
+        margin-bottom: 12px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .footer__mail-block a:nth-of-type(3) {
+        font-weight: 600;
+    }
+}
+
+/* hiding header-menu address block in mobile version */
+@media screen and (max-width: 960px) {
+    .header__menu .social-block ~ p {
+        display: none;
+    }
+}
+
+/* block naming padding fix on contact page in mobile version */
+@media screen and (max-width: 960px) {
+    .contact-info .block-naming {
+        padding-bottom: 10px;
+    }
+}
+
 
 
 
