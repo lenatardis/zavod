@@ -2548,7 +2548,74 @@ h2 span {
 
 
 @media screen and (max-width: 960px) {
+    .calc-wrap p {
+        font-size: 16px;
+        padding-left: 32px;
+    }
 
+    .calc-wrap .block-naming {
+        padding-left: 32px;
+        padding-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .calc-wrap h2, .calc-wrap h3 {
+        font-size: 36px;
+    }
+
+    .custom-tabs > ul {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .custom-tabs > ul li {
+        width: 100%;
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .custom-tabs > ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .calc-wrap label {
+        font-size: 16px;
+    }
+
+    .calc-wrap input {
+        font-size: 16px;
+        height: 28px;
+    }
+
+    .calc-wrap label {
+        margin-bottom: 10px;
+    }
+
+    .tab-grid {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+
+    .calc-wrap .btn {
+        height: 50px;
+    }
+
+    .calculator-form__inner-wrap p {
+        padding-left: 0;
+    }
+
+    .grid-table {
+        overflow-x: auto;
+    }
+
+    .grid-table > div, .grid-table .t-layer, .grid-table .material-cell, .grid-table .total-title {
+        font-size: 14px;
+    }
+
+    .options-list li {
+        padding-top: 10px;
+        font-size: 14px;
+    }
 }
 
 
