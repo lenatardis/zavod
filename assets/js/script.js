@@ -416,7 +416,7 @@ function innerTableRowCalculations(el) {
     let weight = (((square * thickness * density)/coeff)/1000).toFixed(2);
     let weightCell = currentCell.nextAll('.weight-cell').eq(0);
     weightCell.text(weight);
-    let volume = (weight / density).toFixed(2);
+    let volume = (weight / (density/1000)).toFixed(2);
     weightCell.next().text(volume);
     let price = parseFloat(el.attr('data-price'));
     let value = (weight * price).toFixed(2);
