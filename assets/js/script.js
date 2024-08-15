@@ -413,10 +413,10 @@ function innerTableRowCalculations(el) {
     let thickness = parseInt(currentCell.next().text()) / 100;
     let density = parseFloat(el.attr('data-density'));
     let coeff = el.parents('.grid-table').attr('data-coeff');
-    let weight = ((square * thickness * density)/coeff).toFixed(2);
+    let weight = (((square * thickness * density)/coeff)/1000).toFixed(2);
     let weightCell = currentCell.nextAll('.weight-cell').eq(0);
     weightCell.text(weight);
-    let volume = (weight * density).toFixed(2);
+    let volume = (weight / density).toFixed(2);
     weightCell.next().text(volume);
     let price = parseFloat(el.attr('data-price'));
     let value = (weight * price).toFixed(2);
@@ -545,7 +545,6 @@ $('.calc-wrap .btn').on('click', function (e) {
     });
 
 $(document).on('input', '.custom-tabs input:eq(0), .custom-tabs input:eq(1)', function() {
-    console.log('dsad');
     let squareInput = $(this).nextAll('[type="text"]');
     if(squareInput.val()) {
         squareInput.val('');

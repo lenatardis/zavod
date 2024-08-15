@@ -2618,6 +2618,23 @@ h2 span {
     }
 }
 
+/* need to change about class on all pages except index.html to usage-block class with usage-block__desc class inside( next inner element), class edit_block should stay
+ */
+.usage-block.edit_block, .usage-block.edit_block + .text-info-seo {
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 960px) {
+    .head_text_page h2 {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .usage-block.edit_block {
+        padding-bottom: 20px;
+    }
+}
+
 
 
 
