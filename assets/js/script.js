@@ -410,7 +410,7 @@ function populateOptions(type) {
 function innerTableRowCalculations(el) {
     let currentCell =  el.parents('.material-cell').eq(0);
     let square = parseFloat(el.parents('.grid-table').attr('data-square'));
-    let thickness = parseInt(currentCell.next().text());
+    let thickness = parseInt(currentCell.next().text()) / 100;
     let density = parseFloat(el.attr('data-density'));
     let coeff = el.parents('.grid-table').attr('data-coeff');
     let weight = ((square * thickness * density)/coeff).toFixed(2);
