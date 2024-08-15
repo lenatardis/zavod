@@ -437,7 +437,7 @@ function tableInit() {
         let firstItem = $(this).children('li').eq(0);
         innerTableRowCalculations(firstItem);
         let url = firstItem.attr('data-url');
-        firstItem.parents('.material-cell').eq(0).prev().find('a').attr('href', url);
+        firstItem.parents('.material-cell').eq(0).prev().find('a').attr('href', url).attr('target', '_blank');
     })
     totalCount();
 }
@@ -540,9 +540,14 @@ $('.calc-wrap .btn').on('click', function (e) {
         //recalculating total value
         totalCount();
         let url = $(this).attr('data-url');
-        $(this).parents('.material-cell').eq(0).prev().find('a').attr('href', url);
+        $(this).parents('.material-cell').eq(0).prev().find('a').attr('href', url).attr('target', '_blank');
 
     });
 
-
-
+$(document).on('input', '.custom-tabs input:eq(0), .custom-tabs input:eq(1)', function() {
+    console.log('dsad');
+    let squareInput = $(this).nextAll('[type="text"]');
+    if(squareInput.val()) {
+        squareInput.val('');
+    }
+});
