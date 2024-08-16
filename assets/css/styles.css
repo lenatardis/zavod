@@ -2346,7 +2346,7 @@ h2 span {
     display: grid;
     grid-template-columns: 0.8fr 1.5fr repeat(4, 1fr);
     grid-template-rows: repeat(5, auto);
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     border: 1px solid #191919;
 }
 
@@ -2688,6 +2688,38 @@ h2 span {
 
 .options-list li.hidden-option {
     display: none;
+}
+
+.calc-btn-row {
+    display: flex;
+    padding-bottom: 80px;
+}
+
+.calc-btn-row > button:first-child {
+    margin-right: 30px;
+}
+
+.hidden-row {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .grid-table {
+        margin-bottom: 40px;
+    }
+
+    .calc-btn-row {
+        flex-direction: column;
+    }
+
+    .calc-btn-row .btn {
+        height: 50px;
+    }
+
+    .calc-btn-row > button:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
 
 

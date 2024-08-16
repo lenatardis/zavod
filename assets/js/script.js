@@ -168,6 +168,7 @@ $(function ($) {
     $('.tab-wrap>div').hide();
     $('.tab-wrap>div:first-of-type').addClass('active-tab').show();
     $('.custom-tabs li:first-of-type').addClass('active-li');
+    $('.calc-btn-row').addClass('hidden-row');
     $('.custom-tabs li').on('click', function () {
         $(this).parent().find('.active-li').removeClass('active-li');
         $(this).addClass('active-li');
@@ -175,6 +176,7 @@ $(function ($) {
         $($(this).attr('data-tab')).addClass('active-tab').show();
         $('.custom-table').find('.grid-table').remove();
         $('.custom-table').children('p').css('display','none');
+        $('.calc-btn-row').addClass('hidden-row');
     });
 
     function selectProxyGeneration() {
@@ -511,6 +513,7 @@ $('.calc-wrap .btn').on('click', function (e) {
 
             populateOptions('type1');
             tableInit();
+            $('.calc-btn-row').removeClass('hidden-row');
         } else if (
             activeTab === type2
         ) {
@@ -521,6 +524,7 @@ $('.calc-wrap .btn').on('click', function (e) {
 
             populateOptions('type2');
             tableInit();
+            $('.calc-btn-row').removeClass('hidden-row');
         } else {
             wrap.append(table4Layers);
             $('.grid-table').attr('data-type', 'type3');
@@ -529,6 +533,7 @@ $('.calc-wrap .btn').on('click', function (e) {
 
             populateOptions('type3');
             tableInit();
+            $('.calc-btn-row').removeClass('hidden-row');
         }
 
         wrap.children('p').css('display','block');
@@ -538,6 +543,7 @@ $('.calc-wrap .btn').on('click', function (e) {
         }
         $('.custom-table').find('.grid-table').remove();
         $('.custom-table').children('p').css('display','none');
+        $('.calc-btn-row').addClass('hidden-row');
     }
 
     });
@@ -578,3 +584,4 @@ $(document).on('input', '.custom-tabs input:eq(0), .custom-tabs input:eq(1)', fu
         squareInput.val('');
     }
 });
+
