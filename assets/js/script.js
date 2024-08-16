@@ -220,10 +220,10 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div>2</div>\n' +
-        '                        <div class="weight-cell">11</div>\n' +
-        '                        <div>125</div>\n' +
-        '                        <div class="value-cell">4123</div>\n' +
+        '                        <div class="thickness-cell">2</div>\n' +
+        '                        <div class="weight-cell"></div>\n' +
+        '                        <div class="volume-cell"></div>\n' +
+        '                        <div class="value-cell"></div>\n' +
         '                        <!--row 3-->\n' +
         '                        <div class="t-layer"><a href="#">Шар №2<br/>Підстилаючий</a></div>\n' +
         '                        <div class="material-cell">\n' +
@@ -238,10 +238,10 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div>5</div>\n' +
-        '                        <div class="weight-cell">32</div>\n' +
-        '                        <div>300</div>\n' +
-        '                        <div class="value-cell">7588</div>\n' +
+        '                        <div class="thickness-cell">5</div>\n' +
+        '                        <div class="weight-cell"></div>\n' +
+        '                        <div class="volume-cell"></div>\n' +
+        '                        <div class="value-cell"></div>\n' +
         '                        <!--row 4-->\n' +
         '                        <div class="t-layer"><a href="#">Шар №1<br/>Несучий</a></div>\n' +
         '                        <div class="material-cell">\n' +
@@ -256,16 +256,17 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div>20</div>\n' +
-        '                        <div class="weight-cell">8</div>\n' +
-        '                        <div>245</div>\n' +
-        '                        <div class="value-cell">4512</div>\n' +
+        '                        <div class="thickness-cell">20</div>\n' +
+        '                        <div class="weight-cell"></div>\n' +
+        '                        <div class="volume-cell"></div>\n' +
+        '                        <div class="value-cell"></div>\n' +
         '                        <!--row 5-->\n' +
         '                        <div class="t-layer"></div>\n' +
-        '                        <div></div>\n' +
-        '                        <div class="merged"></div>\n' +
-        '                        <div class="total-title">Загальна вартість</div>\n' +
-        '                        <div class="t-total">16223.00</div>\n' +
+        '                        <div class="total-title">Сумарно:</div>\n' +
+        '                        <div class="total-thickness"></div>\n' +
+        '                        <div class="total-weight"></div>\n' +
+        '                        <div class="total-volume"></div>\n' +
+        '                        <div class="t-total"></div>\n' +
         '                    </div>';
 
     let table4Layers = ' <div class="grid-table">\n' +
@@ -290,10 +291,10 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div>2</div>\n' +
-        '                        <div class="weight-cell">11</div>\n' +
-        '                        <div>125</div>\n' +
-        '                        <div class="value-cell">4123</div>\n' +
+        '                        <div class="thickness-cell">2</div>\n' +
+        '                        <div class="weight-cell"></div>\n' +
+        '                        <div class="volume-cell"></div>\n' +
+        '                        <div class="value-cell"></div>\n' +
         '                        <!--row 3-->\n' +
         '                        <div class="t-layer"><a href="#">Шар №3<br/>Підстилаючий</a></div>\n' +
         '                        <div class="material-cell">\n' +
@@ -308,10 +309,10 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div>5</div>\n' +
-        '                        <div class="weight-cell">32</div>\n' +
-        '                        <div>300</div>\n' +
-        '                        <div class="value-cell">7588</div>\n' +
+        '                        <div class="thickness-cell">5</div>\n' +
+        '                        <div class="weight-cell"></div>\n' +
+        '                        <div class="volume-cell"></div>\n' +
+        '                        <div class="value-cell"></div>\n' +
         '                         <!--row4-->\n' +
         '                         <div class="t-layer"><a href="#">Шар №2<br/>Підстилаючий</a></div>\n' +
         '                        <div class="material-cell">\n' +
@@ -326,10 +327,10 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                         <div>5</div>\n' +
-        '                         <div class="weight-cell">32</div>\n' +
-        '                         <div>300</div>\n' +
-        '                         <div class="value-cell">7588</div>\n' +
+        '                         <div class="thickness-cell">5</div>\n' +
+        '                         <div class="weight-cell"></div>\n' +
+        '                         <div class="volume-cell"></div>\n' +
+        '                         <div class="value-cell"></div>\n' +
         '                        <!--row 5-->\n' +
         '                        <div class="t-layer"><a href="#">Шар №1<br/>Несучий</a></div>\n' +
         '                        <div class="material-cell">\n' +
@@ -344,22 +345,23 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div>20</div>\n' +
-        '                        <div class="weight-cell">8</div>\n' +
-        '                        <div>245</div>\n' +
-        '                        <div class="value-cell">4512</div>\n' +
+        '                        <div class="thickness-cell">20</div>\n' +
+        '                        <div class="weight-cell"></div>\n' +
+        '                        <div class="volume-cell"></div>\n' +
+        '                        <div class="value-cell"></div>\n' +
         '                        <!--row 6-->\n' +
         '                        <div class="t-layer"></div>\n' +
-        '                        <div></div>\n' +
-        '                        <div class="merged"></div>\n' +
-        '                        <div class="total-title">Загальна вартість</div>\n' +
-        '                        <div class="t-total">16223.00</div>\n' +
+        '                        <div class="total-title">Сумарно:</div>\n' +
+        '                        <div class="total-thickness"></div>\n' +
+        '                        <div class="total-weight"></div>\n' +
+        '                        <div class="total-volume"></div>\n' +
+        '                        <div class="t-total"></div>\n' +
         '                    </div>';
 
     //table type detection and generation
-    const type1 = 'Пішохідна доріжка';
-    const type2 = 'Під\'їздна дорога';
-    const type3 = 'Основна дорога';
+    const type1 = $('.custom-tabs > ul li').eq(0).text();
+    const type2 = $('.custom-tabs > ul li').eq(1).text();
+    const type3 = $('.custom-tabs > ul li').eq(2).text();
 
 const selectData = {
     type1: {  // Пішохідна доріжка
@@ -398,6 +400,8 @@ function populateOptions(type) {
             }
         });
 
+        optionsList.find('li').eq(0).addClass('hidden-option');
+
         let hiddenSelect = optionsList.prevAll('.select-wrap').eq(0).find('.hidden-select');
         hiddenSelect.empty();
         optionsList.find('li').each(function() {
@@ -414,6 +418,7 @@ function innerTableRowCalculations(el) {
     let density = parseFloat(el.attr('data-density'));
     let coeff = el.parents('.grid-table').attr('data-coeff');
     let weight = (((square * thickness * density)/coeff)/1000).toFixed(2);
+    console.log(weight);
     let weightCell = currentCell.nextAll('.weight-cell').eq(0);
     weightCell.text(weight);
     let volume = (weight / (density/1000)).toFixed(2);
@@ -424,11 +429,31 @@ function innerTableRowCalculations(el) {
 }
 
 function totalCount(){
+    let totalWeight = 0;
+    $('.weight-cell').each(function(){
+        totalWeight+=parseFloat($(this).text());
+    });
+    $('.total-weight').text(totalWeight.toFixed(2));
+
+    let totalVolume = 0;
+    $('.volume-cell').each(function(){
+        totalVolume+=parseFloat($(this).text());
+    });
+    $('.total-volume').text(totalVolume.toFixed(2));
+
     let total = 0;
     $('.value-cell').each(function(){
         total+=parseFloat($(this).text());
     });
     $('.t-total').text(total.toFixed(2));
+}
+
+function thicknessInitCalculation() {
+    let totalThickness = 0;
+    $('.thickness-cell').each(function(){
+        totalThickness+=parseFloat($(this).text());
+    });
+    $('.total-thickness').text(totalThickness.toFixed(2));
 }
 
 function tableInit() {
@@ -438,7 +463,8 @@ function tableInit() {
         innerTableRowCalculations(firstItem);
         let url = firstItem.attr('data-url');
         firstItem.parents('.material-cell').eq(0).prev().find('a').attr('href', url).attr('target', '_blank');
-    })
+    });
+    thicknessInitCalculation();
     totalCount();
 }
 
@@ -541,6 +567,8 @@ $('.calc-wrap .btn').on('click', function (e) {
         totalCount();
         let url = $(this).attr('data-url');
         $(this).parents('.material-cell').eq(0).prev().find('a').attr('href', url).attr('target', '_blank');
+        $(this).parent().find('.hidden-option').removeClass('hidden-option');
+        $(this).addClass('hidden-option');
 
     });
 

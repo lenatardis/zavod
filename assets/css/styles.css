@@ -2400,6 +2400,7 @@ h2 span {
 }
 
 .grid-table .total-title {
+    justify-content: flex-start;
     color: #FF8A00;
     text-transform: uppercase;
     font-weight: 600;
@@ -2462,16 +2463,16 @@ h2 span {
     color: #363636;
 }
 
-.select-proxy span {
+/*.select-proxy span {
     position: absolute;
     right: 0;
     top: 6px;
     width: 12px;
     height: 12px;
     transition: transform 400ms ease;
-}
+}*/
 
-.select-proxy span:before, .select-proxy span:after {
+/*.select-proxy span:before, .select-proxy span:after {
     content: "";
     position: absolute;
     background: #000000;
@@ -2483,10 +2484,52 @@ h2 span {
 
 .select-proxy span:after {
     transform: rotate(90deg);
+}*/
+
+.select-proxy span {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    width: 48px;
+    height: 48px;
+    transition: transform 400ms ease;
+}
+
+.select-proxy span:before {
+    position: absolute;
+    content:'';
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    background: url('../../assets/images/change1.svg') no-repeat left top;
 }
 
 .select-proxy.open span {
-    transform: rotate(45deg);
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1390px) {
+    .select-proxy span {
+        top: 12px;
+        transform: scale(0.85);
+    }
+
+    .select-proxy.open span {
+        transform: rotate(180deg) scale(0.85);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .select-proxy span {
+        top: 28px;
+        transform: scale(0.7);
+        right: -20px;
+    }
+
+    .select-proxy.open span {
+        transform: rotate(180deg) scale(0.7);
+    }
 }
 
 .options-list {
@@ -2543,6 +2586,10 @@ h2 span {
 
     .grid-table {
         margin-bottom: 80px;
+    }
+
+    .custom-tabs > ul li {
+        text-align: center;
     }
 }
 
@@ -2616,6 +2663,10 @@ h2 span {
         padding-top: 10px;
         font-size: 14px;
     }
+
+    .custom-tabs > ul li {
+        text-align: left;
+    }
 }
 
 /* need to change about class on all pages except index.html to usage-block class with usage-block__desc class inside( next inner element), class edit_block should stay
@@ -2633,6 +2684,10 @@ h2 span {
     .usage-block.edit_block {
         padding-bottom: 20px;
     }
+}
+
+.options-list li.hidden-option {
+    display: none;
 }
 
 
