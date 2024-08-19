@@ -537,6 +537,13 @@ $('.calc-wrap .btn').on('click', function (e) {
         }
 
         wrap.children('p').css('display','block');
+
+        let blockOffset = $('.custom-table').offset().top;
+
+        $('html, body').animate({
+            scrollTop: blockOffset
+        }, 300);
+
     } else {
         if (!$(this).prev().find('p').length) {
             $(this).prev().append('<p style="color:red; font-weight:600; padding-bottom:20px;">Введіть, будь ласка, необхідні дані!</p>')
