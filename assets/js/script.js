@@ -586,7 +586,8 @@ $('.calc-wrap .btn').on('click', function (e) {
     });
 
 $(document).on('input', '.custom-tabs input:eq(0), .custom-tabs input:eq(1)', function() {
-    let squareInput = $(this).nextAll('[type="text"]');
+    let lastInputIndex =  $(this).parent().children('[type="text"]').length - 1;
+    let squareInput = $(this).parent().children('[type="text"]').eq(lastInputIndex);
     if(squareInput.val()) {
         squareInput.val('');
     }
