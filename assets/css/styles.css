@@ -1450,7 +1450,14 @@ h2 span, h1 span {
 /* FAQ-block*/
 
 .FAQ-block {
+    padding-top: 60px;
     padding-bottom: 200px;
+}
+
+@media screen and (max-width: 1450px) {
+    .FAQ-block {
+        padding-top: 0;
+    }
 }
 
 .FAQ-block .block-naming {
@@ -2730,6 +2737,33 @@ h2 span {
 @media screen and (max-width: 960px) {
     .price-block .usage-block {
         padding-bottom: 0;
+    }
+}
+
+/* policy fix*/
+
+.usage-block.policy-block {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1450px) {
+    .usage-block.policy-block {
+        padding-bottom: 30px;
+    }
+
+    .price-block.policy-wrap {
+        padding-bottom: 30px;
+    }
+}
+
+.text-info-seo {
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 960px) {
+
+    .production-hero.conf-block h2 {
+        font-size: 50px;
     }
 }
 

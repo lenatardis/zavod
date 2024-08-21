@@ -450,6 +450,17 @@ function totalCount(){
     $('.t-total').text(total.toFixed(2));
 }
 
+const thicknessData = {'type1': [20,5,2], 'type2': [20,10,10,2], 'type3': [25,15,10,2]};
+
+function thicknessFormation(type){
+    let thicknessColumn = thicknessData[type];
+    console.log(thicknessColumn);
+    let length = thicknessColumn.length;
+    $('.thickness-cell').each(function(index){
+       $(this).text(thicknessColumn[(length - 1) - index]);
+    });
+}
+
 function thicknessInitCalculation() {
     let totalThickness = 0;
     $('.thickness-cell').each(function(){
@@ -458,7 +469,8 @@ function thicknessInitCalculation() {
     $('.total-thickness').text(totalThickness.toFixed(2));
 }
 
-function tableInit() {
+
+function tableInit(type) {
     selectProxyGeneration();
     $('.options-list').each(function(){
         let firstItem = $(this).children('li').eq(0);
@@ -466,6 +478,7 @@ function tableInit() {
         let url = firstItem.attr('data-url');
         firstItem.parents('.material-cell').eq(0).prev().find('a').attr('href', url).attr('target', '_blank');
     });
+    thicknessFormation(type);
     thicknessInitCalculation();
     totalCount();
 }
@@ -512,7 +525,7 @@ $('.calc-wrap .btn').on('click', function (e) {
             $('.grid-table').attr('data-square', square);
 
             populateOptions('type1');
-            tableInit();
+            tableInit('type1');
             $('.calc-btn-row').removeClass('hidden-row');
         } else if (
             activeTab === type2
@@ -523,7 +536,7 @@ $('.calc-wrap .btn').on('click', function (e) {
             $('.grid-table').attr('data-square', square);
 
             populateOptions('type2');
-            tableInit();
+            tableInit('type2');
             $('.calc-btn-row').removeClass('hidden-row');
         } else {
             wrap.append(table4Layers);
@@ -532,7 +545,7 @@ $('.calc-wrap .btn').on('click', function (e) {
             $('.grid-table').attr('data-square', square);
 
             populateOptions('type3');
-            tableInit();
+            tableInit('type3');
             $('.calc-btn-row').removeClass('hidden-row');
         }
 
