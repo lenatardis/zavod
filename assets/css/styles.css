@@ -2768,6 +2768,23 @@ h2 span {
 }
 
 
+@media screen and (max-width: 960px) {
+    .delivery-slider .hero-slider__item img, .delivery-slider .hero-slider__item video {
+        height: calc(40vh - 64px);
+        object-fit: cover;
+        object-position: center;
+    }
+
+   .delivery-slider .hero-slider__item h2 {
+        width: 320px;
+        font-size: 72px;
+        left: 16px;
+        top: auto;
+        bottom: 5%;
+        transform: translate(0, 0);
+    }
+}
+
 
 
 
