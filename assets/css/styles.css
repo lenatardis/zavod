@@ -2785,6 +2785,16 @@ h2 span {
     }
 }
 
+#preloader {
+    transform: scale(0.5);
+}
+
+@media screen and (max-width: 960px) {
+    #preloader {
+        transform: scale(0.45);
+    }
+}
+
 
 
 
