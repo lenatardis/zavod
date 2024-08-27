@@ -618,4 +618,15 @@ $(document).on('input change', '.calc-wrap input[type="number"]', function() {
     totalCount();
 });
 
+//insert this into canvas code starting from line 7 before line 9 -  html2canvas(htmlContent)
+
+/*var htmlContent = document.querySelector('.print-pdf').cloneNode(true);
+var customTabs = htmlContent.querySelector('.custom-tabs');
+if (customTabs) {
+    var ulElement = customTabs.querySelector(':scope > ul');
+    if (ulElement) {
+        ulElement.remove();
+    }
+}*/
+
 
