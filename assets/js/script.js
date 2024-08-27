@@ -372,10 +372,10 @@ const selectData = {
         layer3: [256, 271, 270]
     },
     type2: {  // Підїзна дорога
-        layer1: [257, 258, 264, 263],
-        layer2: [251, 259, 265],
-        layer3: [269, 267],
-        layer4: [271, 270, 256]
+        // [257, 258, 264, 263, 251, 259, 265]
+        layer1: [257, 258, 264, 263, 251, 259, 265],
+        layer2: [269, 267],
+        layer3: [271, 270, 256]
     },
     type3: {  // Основна дорога
         layer1: [257, 258, 264, 263],
@@ -450,7 +450,7 @@ function totalCount(){
     $('.t-total').text(total.toFixed(2));
 }
 
-const thicknessData = {'type1': [20,5,2], 'type2': [20,10,10,2], 'type3': [25,15,10,2]};
+const thicknessData = {'type1': [20,5,2], 'type2': [25,10,2], 'type3': [25,15,10,2]};
 
 function thicknessFormation(type){
     let thicknessColumn = thicknessData[type];
@@ -530,7 +530,7 @@ $('.calc-wrap .btn').on('click', function (e) {
         } else if (
             activeTab === type2
         ) {
-            wrap.append(table4Layers);
+            wrap.append(table3Layers);
             $('.grid-table').attr('data-type', 'type2');
             $('.grid-table').attr('data-coeff', 0.95);
             $('.grid-table').attr('data-square', square);
