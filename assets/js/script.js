@@ -222,7 +222,7 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div class="thickness-cell">2</div>\n' +
+        '                        <div class="thickness-cell"></div>\n' +
         '                        <div class="weight-cell"></div>\n' +
         '                        <div class="volume-cell"></div>\n' +
         '                        <div class="value-cell"></div>\n' +
@@ -240,7 +240,7 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div class="thickness-cell">5</div>\n' +
+        '                        <div class="thickness-cell"></div>\n' +
         '                        <div class="weight-cell"></div>\n' +
         '                        <div class="volume-cell"></div>\n' +
         '                        <div class="value-cell"></div>\n' +
@@ -258,7 +258,7 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div class="thickness-cell">20</div>\n' +
+        '                        <div class="thickness-cell"></div>\n' +
         '                        <div class="weight-cell"></div>\n' +
         '                        <div class="volume-cell"></div>\n' +
         '                        <div class="value-cell"></div>\n' +
@@ -293,7 +293,7 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div class="thickness-cell">2</div>\n' +
+        '                        <div class="thickness-cell"></div>\n' +
         '                        <div class="weight-cell"></div>\n' +
         '                        <div class="volume-cell"></div>\n' +
         '                        <div class="value-cell"></div>\n' +
@@ -311,7 +311,7 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div class="thickness-cell">5</div>\n' +
+        '                        <div class="thickness-cell"></div>\n' +
         '                        <div class="weight-cell"></div>\n' +
         '                        <div class="volume-cell"></div>\n' +
         '                        <div class="value-cell"></div>\n' +
@@ -329,7 +329,7 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                         <div class="thickness-cell">5</div>\n' +
+        '                         <div class="thickness-cell"></div>\n' +
         '                         <div class="weight-cell"></div>\n' +
         '                         <div class="volume-cell"></div>\n' +
         '                         <div class="value-cell"></div>\n' +
@@ -347,7 +347,7 @@ $(function ($) {
         '                            <ul class="options-list">\n' +
         '                            </ul>\n' +
         '                        </div>\n' +
-        '                        <div class="thickness-cell">20</div>\n' +
+        '                        <div class="thickness-cell"></div>\n' +
         '                        <div class="weight-cell"></div>\n' +
         '                        <div class="volume-cell"></div>\n' +
         '                        <div class="value-cell"></div>\n' +
@@ -414,23 +414,29 @@ function populateOptions(type) {
 }
 
 function innerTableRowCalculations(el) {
-    let currentCell =  el.parents('.material-cell').eq(0);
-    let square = parseFloat(el.parents('.grid-table').attr('data-square'));
-    let thickness = parseInt(currentCell.next().text()) / 100;
-    let density = parseFloat(el.attr('data-density'));
-    let coeff = el.parents('.grid-table').attr('data-coeff');
+    let currentCell =  el.parents('.material-cell').eq(0).length ? el.parents('.material-cell').eq(0) : el.parents('.thickness-cell').eq(0).prev();
+    let currentElement = el.parents('.material-cell').eq(0).length ? el : el.parents('.thickness-cell').eq(0).prev().find('.hidden-option');
+    let square = parseFloat(currentElement.parents('.grid-table').attr('data-square'));
+    let thickness = parseInt(currentCell.next().find('[type="number"]').val()) / 100;
+    let density = parseFloat(currentElement.attr('data-density'));
+    let coeff = currentElement.parents('.grid-table').attr('data-coeff');
     let weight = (((square * thickness * density)/coeff)/1000).toFixed(2);
-    console.log(weight);
     let weightCell = currentCell.nextAll('.weight-cell').eq(0);
     weightCell.text(weight);
     let volume = (weight / (density/1000)).toFixed(2);
     weightCell.next().text(volume);
-    let price = parseFloat(el.attr('data-price'));
+    let price = parseFloat(currentElement.attr('data-price'));
     let value = (weight * price).toFixed(2);
     weightCell.nextAll('.value-cell').eq(0).text(value);
 }
 
 function totalCount(){
+    let totalThickness = 0;
+    $('.thickness-cell').each(function(){
+        totalThickness+=parseFloat($(this).find('[type="number"]').val());
+    });
+    $('.total-thickness').text(totalThickness.toFixed(2));
+
     let totalWeight = 0;
     $('.weight-cell').each(function(){
         totalWeight+=parseFloat($(this).text());
@@ -454,32 +460,22 @@ const thicknessData = {'type1': [20,5,2], 'type2': [25,10,2], 'type3': [25,15,10
 
 function thicknessFormation(type){
     let thicknessColumn = thicknessData[type];
-    console.log(thicknessColumn);
     let length = thicknessColumn.length;
     $('.thickness-cell').each(function(index){
-       $(this).text(thicknessColumn[(length - 1) - index]);
+        $(this).append('<div class="input-number"><input type="number" value=""/></div>');
+        $(this).find('[type="number"]').val(thicknessColumn[(length - 1) - index]);
     });
 }
-
-function thicknessInitCalculation() {
-    let totalThickness = 0;
-    $('.thickness-cell').each(function(){
-        totalThickness+=parseFloat($(this).text());
-    });
-    $('.total-thickness').text(totalThickness.toFixed(2));
-}
-
 
 function tableInit(type) {
     selectProxyGeneration();
+    thicknessFormation(type);
     $('.options-list').each(function(){
         let firstItem = $(this).children('li').eq(0);
         innerTableRowCalculations(firstItem);
         let url = firstItem.attr('data-url');
         firstItem.parents('.material-cell').eq(0).prev().find('a').attr('href', url).attr('target', '_blank');
     });
-    thicknessFormation(type);
-    thicknessInitCalculation();
     totalCount();
 }
 
@@ -605,4 +601,21 @@ $(document).on('input', '.custom-tabs input:eq(0), .custom-tabs input:eq(1)', fu
         squareInput.val('');
     }
 });
+
+$(document).on('input change', '.calc-wrap input[type="number"]', function() {
+    let value = parseInt($(this).val());
+    if (value < 0) {
+        $(this).val(0);
+    }
+    if (!value && value!==0) {
+        $(this).val(0);
+    }
+    if (value > 100) {
+        $(this).val(100);
+    }
+
+    innerTableRowCalculations($(this));
+    totalCount();
+});
+
 
