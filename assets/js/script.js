@@ -603,15 +603,18 @@ $(document).on('input', '.custom-tabs input:eq(0), .custom-tabs input:eq(1)', fu
 });
 
 $(document).on('input change', '.calc-wrap input[type="number"]', function() {
-    let value = parseInt($(this).val());
-    if (value < 0) {
+    let value = $(this).val();
+
+    value = value.replace(/^0+/, '') || '0';
+
+    let intValue = parseInt(value, 10);
+
+    if (intValue < 0) {
         $(this).val(0);
-    }
-    if (!value && value!==0) {
-        $(this).val(0);
-    }
-    if (value > 100) {
+    } else if (intValue > 100) {
         $(this).val(100);
+    } else {
+        $(this).val(intValue);
     }
 
     innerTableRowCalculations($(this));
