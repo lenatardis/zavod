@@ -2277,6 +2277,14 @@ h2 span {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 24px;
+
+    &:first-child {
+        margin-right: 15px;
+    }
+
+    &:last-child {
+        margin-left: 15px;
+    }
 }
 
 .custom-tabs > ul li.active-li {
@@ -2626,6 +2634,14 @@ h2 span {
         width: 100%;
         font-size: 20px;
         height: 50px;
+
+        &:first-child {
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-left: 0;
+        }
     }
 
     .custom-tabs > ul li:not(:last-child) {
