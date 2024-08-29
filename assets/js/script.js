@@ -189,7 +189,7 @@ $(function ($) {
     /* calculator data */
 
     $.ajax({
-    url: "https://karyer.devplace.info/wp-json/rest/v1/get_product/",
+    url: "https://karyer.com.ua/wp-json/rest/v1/get_product/",
     type: 'POST',
     success: function (response) {
         console.log(response);
@@ -464,6 +464,8 @@ function thicknessFormation(type){
     $('.thickness-cell').each(function(index){
         $(this).append('<div class="input-number"><input type="number" value=""/></div>');
         $(this).find('[type="number"]').val(thicknessColumn[(length - 1) - index]);
+        $(this).append('<span class="input-proxy"><span/>');
+        $(this).find('.input-proxy').text(thicknessColumn[(length - 1) - index]);
     });
 }
 
@@ -619,17 +621,5 @@ $(document).on('input change', '.calc-wrap input[type="number"]', function() {
 
     innerTableRowCalculations($(this));
     totalCount();
+    $(this).parent().next('.input-proxy').text(intValue);
 });
-
-//insert this into canvas code starting from line 7 before line 9 -  html2canvas(htmlContent)
-
-/*var htmlContent = document.querySelector('.print-pdf').cloneNode(true);
-var customTabs = htmlContent.querySelector('.custom-tabs');
-if (customTabs) {
-    var ulElement = customTabs.querySelector(':scope > ul');
-    if (ulElement) {
-        ulElement.remove();
-    }
-}*/
-
-

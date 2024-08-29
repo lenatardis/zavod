@@ -2828,7 +2828,7 @@ h2 span {
 }
 .input-number {
     position:relative;
-    display: inline-block;
+    display: block;
 
 }
 
@@ -2881,6 +2881,11 @@ h2 span {
         text-align: left;
         font-size: 14px;
     }
+}
+
+.input-proxy {
+    display: none;
+    line-height: normal;
 }
 
 
