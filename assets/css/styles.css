@@ -2824,7 +2824,7 @@ h2 span {
 }
 
 .input-number input[type=number] {
-    -moz-appearance: textfield;
+  /*  -moz-appearance: textfield;*/
 }
 .input-number {
     position:relative;
@@ -2886,6 +2886,13 @@ h2 span {
 .input-proxy {
     display: none;
     line-height: normal;
+}
+
+@-moz-document url-prefix() {
+    .input-number:before,
+    .input-number:after {
+        display: none;
+    }
 }
 
 
