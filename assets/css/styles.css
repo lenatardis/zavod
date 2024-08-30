@@ -2893,7 +2893,40 @@ h2 span {
     .input-number:after {
         display: none;
     }
+
+    .input-number input[type=number] {
+        box-shadow: inset -34px 0 0 0 #fff, inset -35px 0 0 0 #191919;
+    }
+
+    .input-number input[type=number]:focus {
+        border-color: #FF8A00;
+        box-shadow: inset -34px 0 0 0 #fff, inset -35px 0 0 0 #FF8A00;
+    }
 }
+
+/* ol style fixes */
+
+@media screen and (max-width: 960px) {
+    .usage-block__desc ol {
+        font-size: 16px;
+        padding-left: 32px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Safari fix */
+/* js detection */
+.safari .input-number:before, .safari .input-number:after{
+    display: none;
+}
+
+/* css detection*/
+@supports (stroke-color:transparent) {
+    .input-number:before, .input-number:after {
+        display: none;
+    }
+}
+
 
 
 

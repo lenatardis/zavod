@@ -623,3 +623,8 @@ $(document).on('input change', '.calc-wrap input[type="number"]', function() {
     totalCount();
     $(this).parent().next('.input-proxy').text(intValue);
 });
+
+console.log(navigator.userAgent);
+if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1 && navigator.userAgent.indexOf('CriOS') === -1 && navigator.userAgent.indexOf('Edg') === -1) {
+    document.body.className += " safari";
+}
