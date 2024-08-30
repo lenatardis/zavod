@@ -2927,6 +2927,12 @@ h2 span {
     }
 }
 
+@media screen and (max-width: 960px) {
+    .hero-slider__item h2 {
+        font-size: 60px;
+    }
+}
+
 
 
 
