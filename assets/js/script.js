@@ -177,7 +177,15 @@ $(function ($) {
         $('.custom-table').find('.grid-table').remove();
         $('.custom-table').children('p').css('display','none');
         $('.calc-btn-row').addClass('hidden-row');
+        $('.input-wrap input').val('');
+        $('.input-wrap .calc-proxy').each(function(){
+            $(this).empty();
+        })
     });
+
+    $('.calc-wrap .input-wrap').each(function(){
+        $(this).append('<div class="calc-proxy"></div>');
+    })
 
     function selectProxyGeneration() {
         $('.select-proxy').each(function(){
@@ -555,6 +563,11 @@ $('.calc-wrap .btn').on('click', function (e) {
             scrollTop: blockOffset
         }, 300);
 
+        $('.input-wrap .calc-proxy').each(function(){
+            let value = $(this).prev('input').val();
+            $(this).text(value);
+        })
+
     } else {
         if (!$(this).prev().find('p').length) {
             $(this).prev().append('<p style="color:red; font-weight:600; padding-bottom:20px;">Введіть, будь ласка, необхідні дані!</p>')
@@ -562,6 +575,9 @@ $('.calc-wrap .btn').on('click', function (e) {
         $('.custom-table').find('.grid-table').remove();
         $('.custom-table').children('p').css('display','none');
         $('.calc-btn-row').addClass('hidden-row');
+        $('.input-wrap .calc-proxy').each(function(){
+            $(this).empty();
+        })
     }
 
     });
@@ -596,9 +612,9 @@ $('.calc-wrap .btn').on('click', function (e) {
 
     });
 
-$(document).on('input', '.custom-tabs input:eq(0), .custom-tabs input:eq(1)', function() {
-    let lastInputIndex =  $(this).parent().children('[type="text"]').length - 1;
-    let squareInput = $(this).parent().children('[type="text"]').eq(lastInputIndex);
+$(document).on('input', '.custom-tabs .input-wrap:eq(0), .custom-tabs .input-wrap:eq(1)', function() {
+    let lastInputIndex =  $(this).parent().children('.input-wrap').length - 1;
+    let squareInput =$(this).parent().children('.input-wrap').eq(lastInputIndex).find('input');
     if(squareInput.val()) {
         squareInput.val('');
     }
@@ -628,3 +644,15 @@ console.log(navigator.userAgent);
 if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1 && navigator.userAgent.indexOf('CriOS') === -1 && navigator.userAgent.indexOf('Edg') === -1) {
     document.body.className += " safari";
 }
+
+//
+/*
+$('.calc-btn-row .btn').eq(0).on('click', function (){
+    $('.active-tab .input-wrap input').css('display', 'none');
+    $('.active-tab .calc-proxy').css('display', 'block');
+})
+
+$('.calc-btn-row .btn').eq(1).on('click', function (){
+    $('.active-tab .input-wrap input').css('display', 'block');
+    $('.active-tab .calc-proxy').css('display', 'none');
+})*/

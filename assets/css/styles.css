@@ -2927,6 +2927,17 @@ h2 span {
     }
 }
 
+.calc-proxy {
+    display: none;
+    height: 38px;
+    border: none;
+    border-bottom: 1px dashed #191919;
+    background: #ffffff;
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 1.4em;
+    color: #FF8A00;
+}
 
 
 
