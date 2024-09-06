@@ -2939,6 +2939,25 @@ h2 span {
     color: #FF8A00;
 }
 
+.hidden-header {
+    display: none;
+   /* display: flex;*/
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.hidden-header p {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hidden-header > div:nth-child(2) {
+    width: 70%;
+}
+
+
 
 
 
