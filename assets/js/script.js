@@ -11,7 +11,7 @@ $(function ($) {
     $('.lang-dropdown__main').click(function (e) {
         e.stopPropagation();
         $(this).next('.lang-dropdown__options').slideToggle();
-        $(this).find('img').toggleClass('rotated-arr');
+        $(this).find('[alt=arrow_up]').toggleClass('rotated-arr');
     })
 
     $('.lang-dropdown__options a').click(function (e) {
