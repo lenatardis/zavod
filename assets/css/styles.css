@@ -2957,6 +2957,24 @@ h2 span {
     width: 70%;
 }
 
+@media screen and (max-width: 960px) {
+    .header__info-block {
+        display: flex;
+    }
+
+    .header__info-block .social-block {
+        display: none;
+    }
+
+    .header__info-block .lang-dropdown {
+        margin-right: 25px;
+    }
+
+    .mobile-lang-dropdown {
+        display: none;
+    }
+}
+
 
 
 
