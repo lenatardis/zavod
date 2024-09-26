@@ -2975,6 +2975,12 @@ h2 span {
     }
 }
 
+@media screen and (max-width: 960px) {
+    .header__info-block .header_contact {
+        display: none;
+    }
+}
+
 
 
 
